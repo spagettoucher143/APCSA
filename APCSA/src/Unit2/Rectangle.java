@@ -6,7 +6,7 @@ public class Rectangle
 	private int width;
 	private int perimeter;
 
-	public void setLengthWidth(int len, int wid )
+	public void setLengthWidth(int len, int wid ) //parameters
 	{
 		length=len;
 		width=wid;
