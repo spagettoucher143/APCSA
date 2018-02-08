@@ -10,12 +10,12 @@ public class Circle
 		rad = radius;
 	}
 
-	public void calculateArea( )
+	public void calculateArea()
 	{
 		area = Math.pow(radius, 2)*Math.PI;
 	}
 
-	public void print( )
+	public void print()
 	{
 		System.out.println(area);
 	}
