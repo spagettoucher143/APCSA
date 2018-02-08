@@ -12,9 +12,14 @@ public class Shape
 	private int height;
 	private Color color;
 
-   public Shape(int x, int y, int wid, int ht, Color col)
+   public void ShapeMaker(int x, int y, int wid, int ht, Color col)
    {
 		xPos = x;
+		yPos = y;
+		width = wid;
+		height = ht;
+		color = col;
+		
 		//finish this constructor
    }
 

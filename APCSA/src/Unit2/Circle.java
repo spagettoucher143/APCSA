@@ -7,7 +7,7 @@ public class Circle
 
 	public void setRadius(double rad)
 	{
-		rad = radius;
+		radius = rad;
 	}
 
 	public void calculateArea()
@@ -17,6 +17,6 @@ public class Circle
 
 	public void print()
 	{
-		System.out.println(area);
+		System.out.printf("The area is :: %.4f\n",area);
 	}
 }
