@@ -12,28 +12,43 @@ public class Shape
 	private int height;
 	private Color color;
 
-   public void ShapeMaker(int x, int y, int wid, int ht, Color col)
+   public Shape(int x, int y, int wid, int ht, Color col)
    {
 		xPos = x;
 		yPos = y;
 		width = wid;
 		height = ht;
 		color = col;
-		
-		//finish this constructor
+   }
+   
+   public void set(int x, int y, int wid, int ht, Color col)
+   {
+	   xPos = x;
+	   yPos = y;
+	   width = wid;
+	   height = ht;
+	   color = col;
    }
 
-
-   public void draw(Graphics window)
+   public void drawRect(Graphics window)
    {
       window.setColor(color);
       window.fillRect(xPos, yPos, width, height);
-
-      //draw whatever you want
-      //    ^
-      //  [ :: ]
-      //    ()
-
+   }
+   
+   public void drawOval(Graphics window)
+   {
+	   window.setColor(color);
+	   window.fillOval(xPos, yPos, width, height);
+   }
+   
+   public void drawStar(Graphics window)
+   {
+	   window.setColor(color);
+	   window.drawLine(xPos, yPos, xPos + width, yPos + height);
+	   window.drawLine(xPos + width, yPos, xPos, yPos + height);
+	   window.drawLine(xPos + (int) (0.5 * width), yPos, xPos + (int) (0.5 * width), yPos + height);
+	   window.drawLine(xPos, yPos + (int) (0.5 * height), xPos + width, yPos + (int) (0.5 * height));
    }
 
    //BONUS
