@@ -17,7 +17,7 @@ public class Lab05d
 		CharacterAnalyzer test = new CharacterAnalyzer(letter);
 		out.println(test);
 		out.print("Enter a number :: ");
-		char letterInt = (char) keyboard.nextInt();
+		char letterInt = (char) keyboard.next().charAt(0);
 		CharacterAnalyzer test2 = new CharacterAnalyzer(letterInt);
 		out.println(test2);
 		
