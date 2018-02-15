@@ -7,18 +7,13 @@ public class Lab08g
 {
 	public static void main ( String[] args )
 	{
-		LoopStats loop = new LoopStats();
-		loop.setNums(1,5);
-		System.out.println(loop.toString());
-		System.out.println("total count " + loop.getTotal());
-		System.out.println("even count " + loop.getEvenCount());
-		System.out.println("odd count " + loop.getOddCount());
-		
-		
-		
-		
-		
-		
+		LoopStats loopStats = new LoopStats();
+		loopStats.setNums(1, 5);
+		System.out.println(loopStats);
+		loopStats.setNums(2, 8);
+		System.out.println(loopStats);
+		loopStats.setNums(5, 15);
+		System.out.println(loopStats);
 					
 	}
 }

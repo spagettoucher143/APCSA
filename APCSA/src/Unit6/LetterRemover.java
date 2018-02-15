@@ -9,32 +9,36 @@ public class LetterRemover
 
 	public LetterRemover()
 	{
-		//call set
+		sentence = "";
+		lookFor = ' ';
 	}
 
 	//add in second constructor
-	
-	
-	
-	public void setRemover(String s, char rem)
+	public LetterRemover(String s,char remove)
+	{
+		setRemover(s,remove);
+	}
+
+	public void setRemover(String s, char remove)
 	{
 		sentence = s;
-		lookFor = rem;
+		lookFor = remove;
 	}
 
 	public String removeLetters()
 	{
-		String cleaned=sentence;
-
-
-
-
-
+		String cleaned = sentence;
+		
+		int i = sentence.indexOf(lookFor);
+		while (i > -1){
+			cleaned = cleaned.substring(0, i) + cleaned.substring(i+1);
+			i = cleaned.indexOf(lookFor);
+		}
 		return cleaned;
 	}
 
 	public String toString()
 	{
-		return sentence + " - letter to remove " + lookFor;
+		return sentence + " - letter to remove " + lookFor + "\n" + removeLetters();
 	}
 }
