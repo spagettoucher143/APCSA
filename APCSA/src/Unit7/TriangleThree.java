@@ -9,15 +9,21 @@ public class TriangleThree
 
 	public TriangleThree()
 	{
+		size = 1;
+		letter = "hello";
 	}
 
 	public TriangleThree(int count, String let)
 	{
+		size = count;
+		letter = let;
 	}
 
 	public void setTriangle( String let, int sz )
 	{
-	}
+		letter = let;
+		size = sz;
+		}
 
 	public String getLetter()
 	{
@@ -27,6 +33,18 @@ public class TriangleThree
 	public String toString()
 	{
 		String output="";
+		for(int i = 0;i <= size;i++){
+			for(int c = size;c >=0;c++){
+				output = output + " ";
+			}
+			for(int c = size;c >=0;c++){
+				output = output + letter;
+			}
+			
+		}
 		return output+"\n";
+		
+		
+
 	}
 }
