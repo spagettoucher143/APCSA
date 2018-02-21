@@ -21,6 +21,7 @@ public class GuessingGame
 		int guess;
 		do{
 			System.out.println("Guess a number!");
+			guess = keyboard.nextInt();
 			counter++;
 		}while(guess != goal);
 			
