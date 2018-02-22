@@ -6,7 +6,7 @@ public class lab10e
 	public static void main(String args[])
 	{
 		Scanner keyboard = new Scanner(System.in);
-		int response;
+		char response;
 
 
 
