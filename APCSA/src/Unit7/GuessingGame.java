@@ -18,10 +18,10 @@ public class GuessingGame
 		Scanner keyboard = new Scanner(System.in);
 		int goal = (int)(Math.random()* upperBound);
 		int counter = 0;
-		int guess;
+		String guess;
 		do{
 			System.out.println("Guess a number!");
-			guess = keyboard.nextInt();
+			guess = keyboard.next();
 			counter++;
 		}while(guess != goal);
 			
