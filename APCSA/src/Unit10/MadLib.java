@@ -13,16 +13,18 @@ public class MadLib
 	private ArrayList<String> verbs;
 	private ArrayList<String> nouns;
 	private ArrayList<String> adjectives;
-	String myans;
+	String op;
 	public MadLib()
 	{
-		String mb="";
+		String mlib="";
 		loadNouns();
 		loadAdjectives();
 		loadVerbs();
 		try{
 			Scanner file = new Scanner(new File(System.getProperty("user.dir")+"\\src\\unit10\\story.dat"));
-			mb= file.nextLine();		
+			while(file.hasNextLine()){
+				mlib= file.nextLine();		
+			}		
 
 		
 		}
@@ -31,25 +33,32 @@ public class MadLib
 			out.println("Houston we have a problem!");
 		}
 		String ans ="";
-		for(int i =0; i < mb.length();i++){
-			if (mb.charAt(i)=='#') ans+=getRandomNoun();
-			else if(mb.charAt(i)=='@') ans+=getRandomVerb();
-			else if(mb.charAt(i)=='&') ans+=getRandomAdjective();
-			else ans+=mb.charAt(i);
+		for(int i =0; i < mlib.length();i++){
+			if (mlib.charAt(i)=='#'){ 
+				ans+=getRandomNoun();
+			}
+			else if(mlib.charAt(i)=='@'){
+				ans+=getRandomVerb();
+			}
+			else if(mlib.charAt(i)=='&'){
+				ans+=getRandomAdjective();
+			}
+			else{
+				ans+=mlib.charAt(i);
+			}
 		}
-		myans=ans;
+		op=ans;
 
 	}
 
 	public MadLib(String fileName)
 	{
-		//load stuff
-		
-		String mb="";
+
+		String mlib="";
 		
 		try{
 			Scanner file = new Scanner(new File(fileName));
-			mb= file.nextLine();		
+			mlib= file.nextLine();		
 			file.close();
 		
 		}
@@ -61,13 +70,17 @@ public class MadLib
 		loadAdjectives();
 		loadVerbs();
 		String ans ="";
-		for(int i =0; i < mb.length();i++){
-			if (mb.charAt(i)=='#') ans+=getRandomNoun();
-			else if(mb.charAt(i)=='@') ans+=getRandomVerb();
-			else if(mb.charAt(i)=='&') ans+=getRandomAdjective();
-			else ans+=mb.charAt(i);
+		for(int i =0; i < mlib.length();i++){
+			if (mlib.charAt(i)=='#') 
+				ans+=getRandomNoun();
+			else if(mlib.charAt(i)=='@')
+				ans+=getRandomVerb();
+			else if(mlib.charAt(i)=='&') 
+				ans+=getRandomAdjective();
+			else 
+				ans+=mlib.charAt(i);
 		}
-		myans=ans;
+		op=ans;
 		
 	}
 
@@ -140,6 +153,6 @@ public class MadLib
 
 	public String toString()
 	{
-	   return myans+"\n\n\n";
+	   return op+"\n\n\n";
 	}
 }

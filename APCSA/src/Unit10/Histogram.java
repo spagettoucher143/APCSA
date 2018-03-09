@@ -34,16 +34,16 @@ public class Histogram
 	{
 		try 
 		{
-			Scanner sc = new Scanner(new File(System.getProperty("user.dir")+"\\src\\unit10\\"+fileName));
-			while(sc.hasNextLine()){
-				String t=sc.nextLine();
+			Scanner scanx = new Scanner(new File(System.getProperty("user.dir")+"\\src\\unit10\\"+fileName));
+			while(scanx.hasNextLine()){
+				String t=scanx.nextLine();
 				for(int i=0; i < t.length();i++){
 					for (int j = 0;j<letters.size();j++){
 						if(letters.get(j)==t.charAt(i)) count.set(j, count.get(j)+1); 
 					}
 				}
 			}
-			sc.close();
+			scanx.close();
 		}
 		catch(Exception e){
 			out.println(e);
@@ -62,10 +62,10 @@ public class Histogram
 				maxv=count.get(i);
 			}
 		}
-		String ans ="";
-		for(int i:maxind) ans+=letters.get(i)+" ";
-		ans+="\n";
-		return ans;
+		String op ="";
+		for(int i:maxind) op+=letters.get(i)+" ";
+		op+="\n";
+		return op;
 	}
 
 	public String leastFrequent()
@@ -80,10 +80,10 @@ public class Histogram
 				minv=count.get(i);
 			}
 		}
-		String ans ="";
-		for(int i:minind) ans+=letters.get(i)+" ";
-		ans+="\n";
-		return ans;
+		String op ="";
+		for(int i:minind) op+=letters.get(i)+" ";
+		op+="\n";
+		return op;
 	}
 	
 	public String toString()
