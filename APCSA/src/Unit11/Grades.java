@@ -27,15 +27,22 @@ public class Grades
 	
 	public void setGrades(String gradeList)
 	{
-
-
+		gradeList.replaceAll("-"," ");
+		String[] test = gradeList.split(" ");
+		int length = gradeList.charAt(0);
+		grades = new double[length];
+		for (int i = 0; i <length;i++){
+			grades[i] = Double.parseDouble(test[i]);
+		}
+		
+		
 
 
 	}
 	
 	public void setGrade(int spot, double grade)
 	{
-
+		
 
 
 	}
@@ -64,6 +71,7 @@ public class Grades
 	public double getHighGrade()
 	{
 		double high = Double.MIN_VALUE;
+		if 
 
 
 
