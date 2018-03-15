@@ -1,10 +1,5 @@
 package Unit12;
 
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
 
 import static java.lang.System.*;
 
@@ -41,11 +36,14 @@ public class Word implements Comparable<Word>
 
 	public int compareTo(Word rhs)
 	{
-
-
-
-	
-		return -1;
+		Word other = (Word)rhs;
+		if(other.numVowels()<numVowels()){
+			return 1;
+		}
+		else if(other.numVowels()>numVowels()){
+			return -1;
+		}
+		return 0;
 	}
 
 	public String toString()
