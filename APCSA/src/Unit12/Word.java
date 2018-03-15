@@ -14,7 +14,7 @@ public class Word implements Comparable<Word>
 
 	public Word( String s)
 	{
-
+		word = s;
 
 	}
 
@@ -22,14 +22,21 @@ public class Word implements Comparable<Word>
 	{
 		String vowels = "AEIOUaeiou";
 		int vowelCount=0;
-
-
-
-
-
-
-
+		for (int i = 0;i < word.length();i++){
+			for (int o = 0;o<vowels.length();o++){
+				if (word.charAt(i) == vowels.charAt(o)){
+					vowelCount++;
+					
+				}
+			}
+		}
 		return vowelCount;
+
+
+
+
+
+
 	}
 
 	public int compareTo(Word rhs)

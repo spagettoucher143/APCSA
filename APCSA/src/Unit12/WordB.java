@@ -8,13 +8,16 @@ public class WordB implements Comparable<Word>
 
 	public WordB( String s )
 	{
-
+		word = s;
 
 	}
 
 	public int compareTo( Word rhs )
 	{
-		
+		Word other = (Word) rhs;
+		if (
+			
+		}
 		
 		
 		

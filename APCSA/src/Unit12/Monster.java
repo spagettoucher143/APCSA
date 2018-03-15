@@ -11,7 +11,9 @@ public class Monster implements Comparable
 
 	//write a default Constructor
 	public Monster(){
-		
+		myWeight=0;
+		myHeight=0;
+		myAge = 0;
 	}
 
 
@@ -19,7 +21,6 @@ public class Monster implements Comparable
 	//write an initialization constructor with an int parameter ht
 	public Monster(int ht){
 		setHeight(ht);
-		getHeight();
 	}
 
 
@@ -29,8 +30,7 @@ public class Monster implements Comparable
 		
 		setHeight(ht);
 		setWeight(wt);
-		getHeight();
-		getWeight();
+		
 	}
 
 
@@ -41,10 +41,6 @@ public class Monster implements Comparable
 		setHeight(ht);
 		setWeight(wt);
 		setAge(age);
-		getHeight();
-		getWeight();
-		getAge();
-		
 	}
 
 
@@ -92,6 +88,7 @@ public class Monster implements Comparable
 	public int compareTo( Object obj )
 	{
 		Monster rhs = (Monster)obj;
+		
 
 		return -1;
 	}

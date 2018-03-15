@@ -15,6 +15,8 @@ public class Lab18d
 		int size = file.nextInt();
 		file.nextLine();
 		
+		
+		
 
 
 
