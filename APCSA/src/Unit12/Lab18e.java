@@ -13,24 +13,21 @@ import java.util.Scanner;
 import java.util.Arrays;
 import static java.lang.System.*;
 
+import java.util.*;
+import java.io.*;
+import static java.lang.System.*;
+
 public class Lab18e
 {
 	public static void main( String args[] ) throws IOException
 	{
-		Scanner file = new Scanner(new File("lab18e.dat"));
-		int vow = file.nextInt();
-		file.nextLine();
-		
-
-
-
-
-
-
-
-
-
-
-
+		BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\unit12\\lab18e.dat"));
+		int n =Integer.parseInt(br.readLine());
+		Word[] myWords = new Word[n];
+		for(int i =0;i<n;i++){
+			myWords[i]=new Word(br.readLine());
+		}
+		Arrays.sort(myWords);
+		for(Word i :myWords)out.println(i);
 	}
 }

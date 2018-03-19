@@ -43,7 +43,16 @@ public class Word implements Comparable<Word>
 		else if(other.numVowels()>numVowels()){
 			return -1;
 		}
-		return 0;
+		for(int i = 0;i <Math.min(other.toString().length(),toString().length());i++){
+			if(toString().charAt(i)>other.toString().charAt(i)){
+				return 1;
+			}
+			else if (toString().charAt(i) < other.toString().charAt(i)){
+				return -1;
+			}
+		}
+		return toString().length()-other.toString().length();
+		
 	}
 
 	public String toString()

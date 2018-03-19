@@ -2,7 +2,7 @@ package Unit12;
 
 import static java.lang.System.*;
 
-public class WordB implements Comparable<Word>
+public class WordB implements Comparable<WordB>
 {
 	private String word;
 
@@ -12,21 +12,19 @@ public class WordB implements Comparable<Word>
 
 	}
 
-	public int compareTo( Word rhs )
+	public int compareTo( WordB rhs )
 	{
-		Word other = (Word) rhs;
-		if (
-			
+		if (word.length()>rhs.toString().length()){
+			return 1;
 		}
-		
-		
-		
-		
+		else if(word.length()<rhs.toString().length()){
+			return -1;
+		}
 		return 0;
 	}
 
 	public String toString()
 	{
-		return "";
+		return word;
 	}
 }
