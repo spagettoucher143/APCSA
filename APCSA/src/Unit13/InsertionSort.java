@@ -19,15 +19,19 @@ class InsertionSort {
 	// modfiers
 	public void add(String word) {
 		int location =Collections.binarySearch(list, word);
-		if(location>=0) return;
 		list.add(Math.abs(1+location),word);
+		
+		
+		
+		
+		
 	}
-
 	public void remove(String word) {
 		for(int i =0;i<list.size();i++){
 			if(list.get(i).equals(word)){
 				list.remove(i);
 				break;
+				
 			}
 		}
 	}
@@ -37,6 +41,7 @@ class InsertionSort {
 
 		for(String i:list){
 			output +=i+" ";
+			
 		}
 		return output;
 		

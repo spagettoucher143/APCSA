@@ -22,7 +22,7 @@ public class FancyWords
 	public String toString()
 	{
 		String output="";
-		int max = Integer.MIN_VALUE;
+		int max = 0;
 		for (String i: wordRay){
 			if (max<i.length()){
 				max=i.length();

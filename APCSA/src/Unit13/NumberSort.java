@@ -14,7 +14,7 @@ public class NumberSort
 	{
 		int count = 0;
 		while(number>0){
-			number/=10;
+			number= number/10;
 			count+=1;
 		}
 		return count;
@@ -22,11 +22,11 @@ public class NumberSort
 	
 	public static int[] getSortedDigitArray(int number)
 	{	
-		int j = getNumDigits(number);
-		int[] sorted = new int[j];
-		for(int i =0;i<j;i++){
+		int k = getNumDigits(number);
+		int[] sorted = new int[k];
+		for(int i =0;i<k;i++){
 			sorted[i]=number%10;
-			number/=10;
+			number = number/10;
 		}
 		Arrays.sort(sorted);
 
