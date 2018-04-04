@@ -1,8 +1,8 @@
 package Unit15;
 public interface Collidable {
-	public boolean CollideLeft(Object obj);
-	public boolean CollideRight(Object obj);
-	public boolean CollideTop(Object obj);
-	public boolean CollideBottom(Object obj);
+	public boolean didCollideLeft(Object obj);
+	public boolean didCollideRight(Object obj);
+	public boolean didCollideTop(Object obj);
+	public boolean didCollideBottom(Object obj);
 
 }

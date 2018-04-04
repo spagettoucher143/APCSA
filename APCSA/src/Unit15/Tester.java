@@ -28,8 +28,8 @@ public class Tester extends JFrame
 		//((Component)padTest).setFocusable(true);			
 		//getContentPane().add(padTest);
 		
-		getContentPane().add(new Pong());
-		//getContentPane().add(new BreakOut());
+		//getContentPane().add(new Pong());
+		getContentPane().add(new BreakOut());
 		//getContentPane().add(new AirHockey());
 		
 		setVisible(true);
