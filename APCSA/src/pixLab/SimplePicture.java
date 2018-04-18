@@ -68,9 +68,9 @@ public class SimplePicture implements DigitalPicture
   */
  public SimplePicture(String fileName)
  {
-   
+   String file = "src\\pixLab\\images\\" + fileName;
    // load the picture into the buffered image 
-   load(fileName);
+   load(file);
    
  }
  
