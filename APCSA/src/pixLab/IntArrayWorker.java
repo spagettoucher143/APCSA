@@ -13,6 +13,45 @@ public class IntArrayWorker
     matrix = theMatrix;
   }
   
+  //ACTIVITY 4//
+  public int getCount(int num){
+	  int count = 0;
+	  
+	  for(int[] x : matrix){
+		  for(int y : x){
+			  if (y == num){
+				  count++;
+			  }
+		  }
+	  }
+	  return count;
+  }
+  
+  public int getLargest(){
+	  int l = Integer.MIN_VALUE;
+	  for(int[]x:matrix){
+		  for(int y:x){
+			  if (y > l){
+				  l = y;
+			  }
+		  }
+	  }
+	  return l;
+  }
+  
+  public int getColTotal(int c){
+	  int t = 0;
+	  for(int i = 0; i < matrix.length; i++){
+		  for(int j = 0; j < matrix[0].length; j++){
+			  if (j == c){
+				  t += matrix[i][j];
+			  }
+		  }
+	  }
+	  return t;
+  }
+  //END OF ACTIVITY 4//
+  
   /**
    * Method to return the total 
    * @return the total of the values in the array

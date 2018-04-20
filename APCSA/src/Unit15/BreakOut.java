@@ -30,7 +30,7 @@ public class BreakOut extends Canvas implements KeyListener, Runnable
 		//set up all variables related to the game
 		
 		
-		ball = new Ball(400,200,10,10,Color.BLUE,-2,2);
+		ball = new Ball(400,200,10,10,Color.BLUE,-4,2);
 		paddle = new Paddle(10,400,20,100,Color.BLUE,7);
 		
 		blocka = new Block(600,30,10,80,Color.RED);
@@ -138,7 +138,7 @@ public class BreakOut extends Canvas implements KeyListener, Runnable
 			ball.setX(400);
 			ball.setY(300);
 			ball.setXSpeed(-(int)(Math.random() * 3 +2));
-			ball.setYSpeed(((int)(Math.random() * 4 +3)));
+			ball.setYSpeed(((int)(Math.random() * 3 +2)));
 			ball.setColor(Color.BLUE);
 		}
 		
@@ -466,10 +466,10 @@ public class BreakOut extends Canvas implements KeyListener, Runnable
 		}
 		if (ball.didCollideTop(paddle) || ball.didCollideBottom(paddle)){
 			ball.setYSpeed(-ball.getYSpeed());
+			
 		}
 		if (ball.didCollideLeft(paddle) || ball.didCollideRight(paddle)){
 			ball.setXSpeed(-ball.getXSpeed());
-			ball.setYSpeed(-ball.getYSpeed());
 		}
 		if (ball.didCollideRight(right)){
 			ball.setXSpeed(-ball.getXSpeed());
