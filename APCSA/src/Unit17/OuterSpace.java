@@ -24,6 +24,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 	private Ship ship;
 	private Ammo ammo;	
 //	private ArrayList<Alien> aliens;
+	private int score;
 	private Aliens aliens;
 	private ArrayList<Ammo> shots;
 	private Alien[][] aa;
@@ -45,7 +46,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		
 		//matrix of aliens
 		aliens = new Aliens(10,10,2);
-		
+		score = 0;
 		aa = aliens.amat();
 		
 //		int spacing = 100;
@@ -97,6 +98,8 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 		graphToBack.drawString("StarFighter ", 25, 50 );
 		
 		//draw components
+		graphToBack.setColor(Color.CYAN);
+		graphToBack.drawString("Score: " + score, 500, 500);
 		ship.draw(graphToBack);
 		
 		//alien movement		
@@ -171,6 +174,11 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
 					if (a.getY() <= aa[i][j].getY()+70 && a.getY()+10 > aa[i][j].getY() 
 							&& (a.getX()>=aa[i][j].getX() + 10 && a.getX()+10<=aa[i][j].getX()+75)){
 						a.setPos(2000,2000);
+						graphToBack.setColor(Color.BLACK);
+						graphToBack.drawString("Score: " + score, 500, 500);
+						score += 24;
+						graphToBack.setColor(Color.CYAN);
+						graphToBack.drawString("Score: " + score, 500, 500);
 						aa[i][j].setPos(1000,1000);
 					}
 				}
