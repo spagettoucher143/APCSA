@@ -9,6 +9,14 @@ package pixLab;
  */
 public class PictureTester
 {
+  /** Method to test blur */
+  public static void testBlur(){
+	  Picture bfly = new Picture("butterfly1.jpg");
+	  bfly.blur(300,300,0,0);
+	  bfly.blur(300,300,0,0);
+	  bfly.blur(300,300,0,0);
+	  bfly.explore();
+  }
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
@@ -208,5 +216,9 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+	testBlur();
+	Picture beach = new Picture("butterfly1.jpg");
+    beach.explore();
+    
   }
 }

@@ -54,11 +54,10 @@ public class Ammo extends MovingThing
 	{
 		//add code to draw the ammo
 		window.setColor(Color.YELLOW);
-		window.fillRect(getX(), getY(), 10, 10);
+		window.fillRect(getX(), getY(), 5, 10);
 
 		this.move("UP");
 	}
-
 	public String toString()
 	{
 		return "";

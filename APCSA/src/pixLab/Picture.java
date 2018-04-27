@@ -374,13 +374,13 @@ public class Picture extends SimplePicture
   //myCollage
   public void myCollage()
   {
-    Picture jenny = new Picture("jenny-red.jpg");
+    Picture jen = new Picture("jenny-red.jpg");
     Picture bar = new Picture("barbaraS.jpg");
     
     bar.grayscale();
-    jenny.fixUnderwater();
+    jen.fixUnderwater();
 
-    this.copy2(jenny,50,50,80,115,105,210);
+    this.copy2(jen,50,50,80,115,105,210);
     this.copy2(bar, 25, 25, 10, 120, 20, 100);
     
     this.mirrorVertical();
@@ -487,6 +487,26 @@ public class Picture extends SimplePicture
 	      }
 	    }
 	  }
+  public void blur(int h,int w,int x, int y){
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  Pixel topPixel = null;
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (int row = x; row < x + h; row++)
+	    {
+	      for (int col = y;col < y+w; col++)
+	      {
+	        leftPixel = pixels[row][col];
+	        rightPixel = pixels[row][col+1];
+	        topPixel = pixels[row+1][col];
+	        leftPixel.setBlue((topPixel.getBlue()+rightPixel.getBlue()+leftPixel.getBlue())/3);
+	        leftPixel.setRed((topPixel.getRed()+rightPixel.getRed()+leftPixel.getRed())/3);
+	        leftPixel.setGreen((topPixel.getGreen()+rightPixel.getGreen()+leftPixel.getGreen())/3);
+	        }
+	    }
+  }
+	  
+  
   
   /* Main method for testing - each class in Java can have a main 
    * method 
